@@ -1,0 +1,9 @@
+---
+  - hosts:  local
+    become: true
+    tasks:
+      - name: Item One
+        user:
+          name: {{user}}
+          uid: {{uid}}
+          groups: {{groups}}

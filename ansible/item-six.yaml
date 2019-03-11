@@ -1,0 +1,10 @@
+---
+  - hosts:     local
+    become:    true
+    vars:
+      users:   {{ users }}
+      time:    99999
+    tasks:
+      - name:  Item Six
+        shell: chage -M "{{ time }}"
+        loop: users
